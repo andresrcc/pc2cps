@@ -1,6 +1,7 @@
 import argparse
 import re
-
+import os
+import json
 
 def parse_lines(regular_expression, lines, separator):
     dict_of_values = {}
@@ -71,3 +72,11 @@ cps_file = {
 
     } #TODO: Put LIBS here.
 }
+
+file_name = os.path.splitext(args.pc_file)[0]
+
+f = open(f"{file_name}.cps", "w")
+f.write(json.dumps(cps_file))
+f.close()
+
+
