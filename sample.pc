@@ -1,0 +1,13 @@
+prefix=/Users/lasote/.conan/data/zlib/1.2.11/lasote/stable/package/b5d68b3533204ad67e01fa587ad28fb8ce010527
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.11
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
